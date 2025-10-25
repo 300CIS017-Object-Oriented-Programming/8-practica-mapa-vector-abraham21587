@@ -1,16 +1,62 @@
 #include <iostream>
+#include "torneo.h"
+using namespace std;
 
-// TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 int main() {
-    // TIP Press <shortcut actionId="RenameElement"/> when your caret is at the <b>lang</b> variable name to see how CLion can help you rename it.
-    auto lang = "C++";
-    std::cout << "Hello and welcome to " << lang << "!\n";
+    torneo torneo; // 👈 Se crea el objeto principal del sistema
 
-    for (int i = 1; i <= 5; i++) {
-        // TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-        std::cout << "i = " << i << std::endl;
-    }
+    int opcion;
 
+    do {
+        cout << "\n🏆 BATTLE ARENA - SISTEMA DE TORNEO eSPORTS 🕹️\n";
+        cout << "---------------------------------------------\n";
+        cout << "1. Registrar videojuego\n";
+        cout << "2. Registrar jugador\n";
+        cout << "3. Inscribir jugador a videojuego\n";
+        cout << "4. Mostrar videojuegos de un jugador\n";
+        cout << "5. Inicializar videojuegos (datos de prueba)\n";
+        cout << "6. Inicializar jugadores (datos de prueba)\n";
+        cout << "0. Salir\n";
+        cout << "---------------------------------------------\n";
+        cout << "Elige una opcion: ";
+        cin >> opcion;
+
+        switch (opcion) {
+            case 1:
+                torneo.registrarVideojuego();
+                break;
+
+            case 2:
+                torneo.registrarJugador();
+                break;
+
+            case 3:
+                torneo.inscribirJugadorEnVideojuego();
+                break;
+
+            case 4:
+                torneo.mostrarVideojuegosJugador();
+                break;
+
+            case 5:
+                torneo.inicializarVideojuegos();
+                break;
+
+            case 6:
+                torneo.inicializarJugadores();
+                break;
+
+            case 0:
+                cout << "\n👋 Saliendo del torneo...\n";
+                break;
+
+            default:
+                cout << "❌ Opción no válida. Intenta de nuevo.\n";
+        }
+
+    } while (opcion != 0);
+
+    // 👇 Al terminar, el destructor de Torneo se ejecuta automáticamente
     return 0;
-    // TIP See CLion help at <a href="https://www.jetbrains.com/help/clion/">jetbrains.com/help/clion/</a>. Also, you can try interactive lessons for CLion by selecting 'Help | Learn IDE Features' from the main menu.
 }
+

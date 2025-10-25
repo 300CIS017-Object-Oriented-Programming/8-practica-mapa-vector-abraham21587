@@ -17,6 +17,9 @@ private:
 
 public:
 
+    torneo();
+    ~torneo();
+
     void registrarVideojuego();
     void registrarJugador();
     void inscribirJugadorEnVideojuego();
