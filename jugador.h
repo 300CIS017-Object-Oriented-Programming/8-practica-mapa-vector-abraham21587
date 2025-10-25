@@ -19,11 +19,12 @@ private:
     vector<videojuegos*> videojuegosIncritos;
 
 public:
-    jugador(string apodo, int nivel);
-    string getapodo();
+    jugador(string nick, int nivel);
+    string getnickname() const;
+    int getnivelRaking() const;
     void incribirvideoj(videojuegos* juego);
-    void mostrarvideojuego();
-    float promediodificultad();
+    void mostrarvideojuego() const;
+    float promediodificultad() const;
 
 };
 
