@@ -20,6 +20,7 @@ public:
     videojuegos(string c, string n, string g, int d);
     string getCodigo();
     string getnombre();
+    string getgenero();
     int getniveldificultad();
     void mostrarinfo();
 

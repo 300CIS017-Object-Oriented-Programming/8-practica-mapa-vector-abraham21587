@@ -19,16 +19,21 @@ string videojuegos::getnombre() {
    return nombre;
 }
 
+string videojuegos::getgenero() {
+   return genero;
+}
+
+
 int videojuegos::getniveldificultad() {
    return niveldificultad;
 }
 
 void videojuegos::mostrarinfo() {
 
-   cout << "el codigo es: " << codigo
-   << "el nombre es: " << nombre
-   << "el genero es: " << genero
-   << "dificultad: " <<niveldificultad
+   cout << " el codigo del juego es : " << codigo
+   << ", el nombre del juegos es : " << nombre
+   << ", el genero del juego es:  " << genero
+   << ", la dificultad es: " <<niveldificultad
    << endl;
 }
 
